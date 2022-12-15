@@ -1,6 +1,6 @@
 .nav-bar {
   display:flex;
-  width: 100%;
+  width: 50%;
   height: 100px;
   position: absolute;
   top: 0;
@@ -132,35 +132,6 @@
     a.active {
       svg {
         color: #ffd700;
-      }
-    }
-  }
-
-  ul {
-    position: absolute;
-    display: flex;
-    align-items: flex-end;
-    flex-direction: column;
-    padding: 0;
-    margin-top:1.3vw;
-    margin-left: 97vw;
-    list-style: none;
-    text-align: center;
-    z-index:9;
-
-    li {
-      a {
-        padding: 7px 7px;
-        display: block;
-        font-size: 15px;
-        line-height: 16px;
-        color: #4d4d4e;
-      }
-
-      &:hover {
-        .anchor-icon {
-          color: #ffd700;
-        }
       }
     }
   }

@@ -18,13 +18,14 @@ const Layout = () => {
 
   return (
     <div className="App">
+      <Sidebar />
       <Particles 
         id="tsparticles"
         init={particlesInit}
         loaded={particlesLoaded}
         options = {config}
-      />
-      <Sidebar />
+        className="particles"
+      />  
       <div className="page">
         <Outlet />
       </div>
