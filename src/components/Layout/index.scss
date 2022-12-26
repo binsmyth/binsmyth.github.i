@@ -2,6 +2,7 @@
   width: 100%;
   height: 100%;
   position: absolute;
+  overflow:auto;
 }
 
 .top-tags {
@@ -31,6 +32,7 @@
   opacity: 0;
   top: 5%;
   margin: 0 auto;
+  margin-top:30vh;
   z-index: 1;
   transform-style: preserve-3d;
   animation: fadeIn 1s forwards;

@@ -6,6 +6,23 @@
     transform: translateY(-50%);
     width: 40%;
     max-height: 100%;
+
+    .language-icons{
+      position: absolute;
+      display: flex;
+      margin-left: 67vw;
+      margin-top: -10vh;
+      gap: 85px;
+      flex-direction: column;
+      color: hsl(60, 100%, 50%);
+      
+      .anchor-icon:hover {
+        color: #ffd700;
+      }
+      h1{
+        margin-top:-.5vh;
+      }
+    }
   }
 
   h1 {
@@ -75,6 +92,17 @@
       animation-delay: 1.3s;
     }
   }
+  .embla {
+    overflow: hidden;
+  }
+  .embla__container {
+    display: flex;
+  }
+  .embla__slide {
+    flex: 0 0 100%;
+    min-width: 0;
+    color: #1aff00;
+  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -119,5 +147,16 @@
     bottom: auto;
     left: 0;
     margin: auto;
+  }
+  .embla {
+    overflow: hidden;
+  }
+  .embla__container {
+    display: flex;
+  }
+  .embla__slide {
+    flex: 0 0 100%;
+    min-width: 0;
+    color: #1aff00;
   }
 }

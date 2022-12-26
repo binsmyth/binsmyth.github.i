@@ -1,12 +1,14 @@
 import { Outlet } from 'react-router-dom'
 import Sidebar from '../Sidebar/'
 import './index.scss'
-import { useCallback } from 'react';
+import { useCallback, useState } from 'react';
 import Particles from 'react-particles';
 import {loadFull} from 'tsparticles';
 import config from '../../config/particles.json';
+import { useEffect } from 'react';
 
 const Layout = () => {
+  const [filter, setFilter] = useState(10);
   const particlesInit = useCallback( async engine => {
     console.log(engine);
     await loadFull(engine);
@@ -16,9 +18,17 @@ const Layout = () => {
     await console.log(container);
   },[]);
 
+  useEffect(()=>{
+    const timer = setInterval(() => {
+      setFilter((t) => t-1);
+    }, 600)
+
+    return ()=>clearInterval(timer);
+  },[])
+
   return (
     <div className="App">
-      <Sidebar />
+      {/* <Sidebar /> */}
       <Particles 
         id="tsparticles"
         init={particlesInit}
@@ -26,7 +36,7 @@ const Layout = () => {
         options = {config}
         className="particles"
       />  
-      <div className="page">
+      <div className="page" style={{filter:`blur(${filter}px)`}}>
         <Outlet />
       </div>
     </div>

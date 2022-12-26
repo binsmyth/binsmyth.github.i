@@ -4,20 +4,11 @@ import AnimatedLetters from "../AnimatedLetters";
 import "./index.scss";
 import { getDocs, collection } from 'firebase/firestore';
 import { db } from '../../firebase';
+import { addSpan } from "../../lib/utility";
 
 const Portfolio = () => { 
     const [letterClass, setLetterClass] = useState('text-animate');
     const [portfolio, setPortfolio] = useState([]);
-
-    useEffect(() => {
-        const timer = setTimeout(() => {
-            setLetterClass('text-animate-hover');
-        }, 3000);
-
-        return () => {
-            clearTimeout(timer);
-        }
-    });
 
     useEffect(() => {
         getPortfolio();
@@ -36,7 +27,7 @@ const Portfolio = () => {
                         return (
                             <div className="image-box" key={idx}>
                                 <img 
-                                src={port.image}
+                                src={'http://localhost:3000/portfolio' + port.image}
                                 className="portfolio-image"
                                 alt="portfolio" />
                                 <div className="content">
@@ -55,20 +46,12 @@ const Portfolio = () => {
         );
     }
 
-
     return (
         <>
-            <div className="container portfolio-page">
-                <h1 className="page-title">
-                    <AnimatedLetters
-                        letterClass={letterClass}
-                        strArray={"Portfolio".split("")}
-                        idx={15}
-                    />
-                </h1>
+            <div className="portfolio-page">
+                <h1 className="intro">{addSpan('Projects')}</h1>
                 <div>{renderPortfolio(portfolio)}</div>
             </div>
-            <Loader type="pacman" />
         </>
     );
 }
