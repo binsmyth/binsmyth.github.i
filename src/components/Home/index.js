@@ -1,4 +1,4 @@
-import { useRef, useLayoutEffect, useEffect } from 'react'
+import React, { useRef, useLayoutEffect, useEffect } from 'react'
 import Loader from 'react-loaders'
 import Logo from './Logo'
 import './index.scss'
@@ -7,7 +7,7 @@ import { SocialLinks } from '../../ui/SocialLinks';
 import { addSpan } from '../../lib/utility';
 import Portfolio from '../Portfolio';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faJs, faReact, faNodeJs } from '@fortawesome/free-brands-svg-icons';
+import { faJs, faReact, faNodeJs, faHtml5 } from '@fortawesome/free-brands-svg-icons';
 
 const Home = () => {
   const animationRef = useRef(null);
@@ -34,33 +34,44 @@ const Home = () => {
     <>
       <div className="container home-page">
         <div className="text-zone">
-          <h1 className="intro">{addSpan('Hi, I\'m Vineet.')}</h1>
-          <div className="language-icons">
-            <h1>Languages</h1>
-            <FontAwesomeIcon 
-              icon={faJs}
-              size="6x"
-              className='anchor-icon fa-bounce'
-              style={{animationDuration: '10s'}}
-            />
-            <FontAwesomeIcon 
-              icon={faReact}
-              size="6x"
-              className='anchor-icon fa-spin'
-              style={{animationDuration: '10s'}}
-            />
-            <FontAwesomeIcon 
-              icon={faNodeJs}
-              size="6x"
-              className='anchor-icon fa-flip'
-              style={{animationDuration: '10s'}}
-            />
-          </div>
           <div className="about-me">
-            <p>
-              A web developer looking for opportunity.
-            </p>
+            <h1 className="intro">{addSpan('Hi Vineet here - A Web Developer')}</h1>
+            <h2>
+             I am based in Melbourne, Australia. Currently I volunteer (remote) as a front-end developer for a startup in Osaka Japan.
+             I am passionate about technology and keen on solving problems using them.
+            </h2>
             <SocialLinks />
+          </div>
+          <div className="languages">
+            <h1>Tech Stack</h1>
+            
+            <div className="language-icons">
+              <FontAwesomeIcon
+                icon={faJs}
+                size="2x"
+                className='anchor-icon fa-flip'
+                style={{animationDuration: '10s'}}
+              />
+              <FontAwesomeIcon
+                icon={faReact}
+                size="2x"
+                className='anchor-icon fa-spin'
+                style={{animationDuration: '10s'}}
+              />
+              <FontAwesomeIcon
+                icon={faNodeJs}
+                size="2x"
+                className='anchor-icon fa-flip'
+                style={{animationDuration: '10s'}}
+              />
+              <FontAwesomeIcon
+                icon={faHtml5}
+                size="2x"
+                className='anchor-icon fa-beat'
+                style={{'--fa-animation-duration': '1s'}}
+              />
+            </div>
+            
           </div>
           <Portfolio />
         </div>

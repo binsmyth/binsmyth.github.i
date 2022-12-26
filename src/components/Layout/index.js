@@ -21,7 +21,7 @@ const Layout = () => {
   useEffect(()=>{
     const timer = setInterval(() => {
       setFilter((t) => t-1);
-    }, 600)
+    }, 300)
 
     return ()=>clearInterval(timer);
   },[])

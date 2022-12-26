@@ -1,28 +1,34 @@
 .home-page {
   .text-zone {
-    position: absolute;
+    position: relative;
     left: 10%;
     top: 50%;
     transform: translateY(-50%);
     width: 40%;
     max-height: 100%;
-
-    .language-icons{
-      position: absolute;
-      display: flex;
-      margin-left: 67vw;
-      margin-top: -10vh;
-      gap: 85px;
-      flex-direction: column;
-      color: hsl(60, 100%, 50%);
-      
-      .anchor-icon:hover {
-        color: #ffd700;
-      }
-      h1{
-        margin-top:-.5vh;
+    .about-me{
+      .intro{
+        color:#ffffff;
       }
     }
+    .languages{
+      position:relative;
+      padding-top:8vh;
+      h1{
+        color:#ffffff;
+      }
+      .language-icons{
+        display: flex;
+        padding-top:4vh;
+        gap: 20px;
+        color: hsl(60, 6%, 46%);
+        
+        .anchor-icon:hover {
+          color: #ffd700;
+        }
+      }
+    }
+    
   }
 
   h1 {
@@ -47,7 +53,7 @@
     color: #8d8d8d;
     margin-top: 20px;
     font-weight: 400;
-    font-size: 11px;
+    font-size: 15px;
     font-family: sans-serif;
     letter-spacing: 3px;
     animation: fadeIn 1s 1.8s backwards;
@@ -91,17 +97,6 @@
     &:nth-of-type(3) {
       animation-delay: 1.3s;
     }
-  }
-  .embla {
-    overflow: hidden;
-  }
-  .embla__container {
-    display: flex;
-  }
-  .embla__slide {
-    flex: 0 0 100%;
-    min-width: 0;
-    color: #1aff00;
   }
 }
 
@@ -147,16 +142,5 @@
     bottom: auto;
     left: 0;
     margin: auto;
-  }
-  .embla {
-    overflow: hidden;
-  }
-  .embla__container {
-    display: flex;
-  }
-  .embla__slide {
-    flex: 0 0 100%;
-    min-width: 0;
-    color: #1aff00;
   }
 }
