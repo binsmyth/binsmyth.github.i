@@ -1,6 +1,4 @@
 import { Outlet } from 'react-router-dom'
-import Sidebar from '../Sidebar/'
-import './index.scss'
 import { useCallback, useState } from 'react';
 import Particles from 'react-particles';
 import {loadFull} from 'tsparticles';

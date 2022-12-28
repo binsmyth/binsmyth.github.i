@@ -5,7 +5,6 @@ import { db } from '../../firebase';
 import { addSpan } from "../../lib/utility";
 
 const Portfolio = () => { 
-    const [letterClass, setLetterClass] = useState('text-animate');
     const [portfolio, setPortfolio] = useState([]);
 
     useEffect(() => {

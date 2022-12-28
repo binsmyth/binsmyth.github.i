@@ -1,5 +1,5 @@
 import './index.scss';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { BoxLink } from '../../ui/BoxLink';
 

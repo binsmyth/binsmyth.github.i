@@ -1,6 +1,5 @@
-import React, { useRef, useLayoutEffect, useEffect } from 'react'
+import React, { useRef, useLayoutEffect } from 'react'
 import Loader from 'react-loaders'
-import Logo from './Logo'
 import './index.scss'
 import anime from 'animejs';
 import { SocialLinks } from '../../ui/SocialLinks';
