@@ -4,6 +4,7 @@ import Particles from 'react-particles';
 import {loadFull} from 'tsparticles';
 import config from '../../config/particles.json';
 import { useEffect } from 'react';
+import Home from '../Home';
 
 const Layout = () => {
   const [filter, setFilter] = useState(10);
@@ -35,7 +36,7 @@ const Layout = () => {
         className="particles"
       />  
       <div className="page" style={{filter:`blur(${filter}px)`}}>
-        <Outlet />
+        <Home />
       </div>
     </div>
   )
