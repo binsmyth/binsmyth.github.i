@@ -1,6 +1,5 @@
 .portfolio-page {
     padding-right: 50px;
-    width: calc(100% - 150px);
     position: initial;
     height: 100%;
     padding-top:8vh;
@@ -25,6 +24,7 @@
         overflow: hidden;
         border-radius: 10px;
         max-width: calc(50% - 10px);
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 
         .portfolio-image {
             position: absolute;
@@ -102,7 +102,7 @@
         }
 
         &:hover:after {
-            opacity: 0.85;
+            opacity: 0.1;
         }
 
         &:hover .content {

@@ -18,9 +18,9 @@ export const SocialLinks = () => {
             <FontAwesomeIcon
               size="2x"
               icon={faLinkedin}
-              color="#4d4d4e"
               className="anchor-icon"
             />
+            <span>LinkedIn</span>
           </a>
         </li>
         <li>
@@ -32,9 +32,9 @@ export const SocialLinks = () => {
             <FontAwesomeIcon
               size="2x"
               icon={faGithub}
-              color="#4d4d4e"
               className="anchor-icon"
             />
+            <span>Github</span>
           </a>
         </li>
       </ul>
