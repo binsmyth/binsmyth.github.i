@@ -21,20 +21,23 @@ const Portfolio = () => {
             <div className="images-container">
                 {
                     portfolio.map((port, idx) => {
+                        console.log('port', port.title);
                         return (
                             <div className="image-box" key={idx}>
-                                <img 
-                                src={'http://localhost:3000/portfolio' + port.image}
-                                className="portfolio-image"
-                                alt="portfolio" />
+                                <div className="image-holder">
+                                    <img 
+                                    src={'http://localhost:3000/portfolio' + port.image}
+                                    className="portfolio-image"
+                                    alt="portfolio" />
+                                </div>
                                 <div className="content">
-                                    <p className="title">{port.name}</p>
+                                    <h1 className="title">{port.title}</h1>
                                     <h4 className="description">{port.description}</h4>
-                                    <button
+                                </div>
+                                <button
                                         className="btn"
                                         onClick={() => window.open(port.url)}
                                     >View</button>
-                                </div>
                             </div>
                         )
                     })
