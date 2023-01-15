@@ -11,7 +11,7 @@ export const SocialLinks = () => {
         <ul>
         <li>
           <a
-            href="https://www.linkedin.com/in/slobodan-gaji%C4%87-006bb8b8/"
+            href="https://www.linkedin.com/in/vineet-man-singh-4b274b71"
             target="_blank"
             rel="noreferrer"
           >
@@ -25,7 +25,7 @@ export const SocialLinks = () => {
         </li>
         <li>
           <a
-            href="https://github.com/bobangajicsm"
+            href="https://github.com/binsmyth"
             target="_blank"
             rel="noreferrer"
           >
