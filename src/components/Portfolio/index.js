@@ -26,7 +26,7 @@ const Portfolio = () => {
                             <div className="image-box" key={idx}>
                                 <div className="image-holder">
                                     <img 
-                                    src={'http://localhost:3000/portfolio' + port.image}
+                                    src={port.image}
                                     className="portfolio-image"
                                     alt="portfolio" />
                                 </div>
