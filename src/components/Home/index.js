@@ -44,35 +44,35 @@ const Home = () => {
           <div className="languages">
             <h1>Tech Stack I like</h1>
             
-            <div className="language-icons">
+            <div className="flex pt-[4vh] gap-8 text-[#7c7c6e] ">
               <FontAwesomeIcon
                 icon={faJs}
                 size="2x"
-                className='anchor-icon fa-flip'
+                className='hover:text-[#ffd700]  fa-flip'
                 style={{animationDuration: '10s'}}
               />
               <FontAwesomeIcon
                 icon={faReact}
                 size="2x"
-                className='anchor-icon fa-spin'
+                className='hover:text-[#ffd700]  fa-spin'
                 style={{animationDuration: '10s'}}
               />
               <FontAwesomeIcon
                 icon={faNodeJs}
                 size="2x"
-                className='anchor-icon fa-flip'
+                className='hover:text-[#ffd700]  fa-flip'
                 style={{animationDuration: '10s'}}
               />
               <FontAwesomeIcon
                 icon={faHtml5}
                 size="2x"
-                className='anchor-icon fa-beat'
+                className='hover:text-[#ffd700]  fa-beat'
                 style={{'--fa-animation-duration': '1s'}}
               />
               <FontAwesomeIcon
                 icon={faCss3}
                 size="2x"
-                className='anchor-icon fa-beat'
+                className='hover:text-[#ffd700]  fa-beat'
                 style={{'--fa-animation-duration': '1s'}}
               />
             </div>

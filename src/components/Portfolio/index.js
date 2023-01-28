@@ -48,7 +48,7 @@ const Portfolio = () => {
 
     return (
         <>
-            <div className="portfolio-page">
+            <div className="portfolio-page ">
                 <h1 className="intro">{addSpan('Projects')}</h1>
                 <div>{renderPortfolio(portfolio)}</div>
             </div>
