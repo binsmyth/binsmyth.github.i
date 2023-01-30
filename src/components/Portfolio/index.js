@@ -6,6 +6,9 @@ import { addSpan } from "../../lib/utility";
 
 const Portfolio = () => { 
     const [portfolio, setPortfolio] = useState([]);
+    const [lineClamp, setLineClamp] = useState({
+        arr:[]
+    });
 
     useEffect(() => {
         getPortfolio();
@@ -18,21 +21,30 @@ const Portfolio = () => {
 
     const renderPortfolio = (portfolio) => {
         return (
-            <div className="images-container">
+            <div className="images-container ">
                 {
                     portfolio.map((port, idx) => {
-                        console.log('port', port.title);
                         return (
-                            <div className="image-box" key={idx}>
+                            <div className="image-box max-w-full h-full sm:h-[400px] sm:max-w-[30%] flex flex-col box-border" key={idx}>
                                 <div className="image-holder">
                                     <img 
                                     src={port.image}
                                     className="portfolio-image"
                                     alt="portfolio" />
                                 </div>
-                                <div className="content">
+                                <div className="overflow-auto p-2 h-64">
                                     <h1 className="title">{port.title}</h1>
-                                    <h4 className="description">{port.description}</h4>
+                                    <h4 
+                                        onClick={()=>{
+                                                let tmp = lineClamp.arr;
+                                                tmp[idx] = !lineClamp.arr[idx];
+                                                setLineClamp({arr:tmp});
+                                            }
+                                        } 
+                                        className={`description ${!lineClamp.arr[idx] ? 'line-clamp-2': null}`}
+                                    >
+                                        { port.description }
+                                    </h4>
                                 </div>
                                 <button
                                         className="btn"
