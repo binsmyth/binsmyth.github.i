@@ -47,7 +47,7 @@ const Portfolio = () => {
                                     </h4>
                                 </div>
                                 <button
-                                        className="btn"
+                                        className="hover:translate-y-[-3px] transition-all duration-[0.3s] ease-[cubic-bezier(0.645, 0.045, 0.355, 1)] uppercase text-2xl h-16 font-bold rounded bg-yellow-400"
                                         onClick={() => window.open(port.url)}
                                     >View</button>
                             </div>
