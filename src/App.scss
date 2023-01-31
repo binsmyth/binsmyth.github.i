@@ -3,6 +3,9 @@ $primary-color: #ffd700;
 @import 'animate.css';
 @import '~loaders.css/src/animations/pacman.scss';
 @import '~loaders.css/src/animations/ball-beat.scss';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @font-face {
   font-family: 'Helvetica Neue';
